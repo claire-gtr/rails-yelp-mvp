@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= simple_form_for @restaurant do |r| %>
+        <%= r.input :name %>
+        <%= r.input :category, collection: Restaurant::CATEGORIES %>
+        <%= r.input :address, input_html: {placeholder: "107 cours Balguerie Stuttenberg, Bordeaux"} %>
+        <%= r.input :phone_number %>
+        <%= r.button :submit, class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
